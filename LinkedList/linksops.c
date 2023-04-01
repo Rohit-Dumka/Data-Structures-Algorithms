@@ -144,5 +144,5 @@ main()
 				printf("enter a valid number");
 				break;
 		}
-	}while(ch>=1&&ch<=7);
+	}while(ch>=1 || ch<=7);
 }
