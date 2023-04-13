@@ -100,5 +100,7 @@ int main()
 				printf("please enter a valid choice");
 				break;
 		}
+		
 	}while(ch>=1||ch<=5);
+	
 }
