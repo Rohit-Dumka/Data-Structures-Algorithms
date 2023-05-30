@@ -11,7 +11,6 @@ typedef struct linkedlist
 node* insert(node*);
 node* del(node*);
 void display(node*);
-
 node* insert(node* last)
 {
 	node *curr=last;
