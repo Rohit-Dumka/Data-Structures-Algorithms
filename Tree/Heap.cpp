@@ -17,7 +17,6 @@ int main()
     }
     cout<<ans.top();
 }
-
 //min heap----------------------------
 
 #include<bits/stdc++.h>
@@ -43,3 +42,7 @@ int main()
         minh.pop();
     }
 }
+
+//largest/Greatest/top/ : min heap
+//smallest/lowest/closest : max heap
+
