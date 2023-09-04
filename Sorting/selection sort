@@ -1,27 +1,3 @@
-#include <iostream>
-using namespace std;
-int main() {
-   int n;
-   cin>>n;
-   int a[n];
-   for(int i=0;i<n;i++)
-        cin>>a[i];
-    cout<<endl;
-    for(int i=0;i<n;i++)
-    {
-        int min=i;
-        for(int j=i+1;j<n;j++)
-        {
-            if(a[j]<a[min])
-                min=j;
-        }
-        swap(a[i],a[min]);
-    }
-    
-    for(int i :a)
-        cout<<i<<" ";
-}
-
 //--------------------------------
 
 #include <iostream>
@@ -30,6 +6,26 @@ int main() {
     int a[]={10,5,8,20,2,18};
     int n=sizeof(a)/sizeof(int);
     for(int i=0;i<n;i++){
+        int min=i;
+        for(int j=i+1;j<n;j++){
+            if(a[j]<a[min])
+                min=j;
+        }
+       swap(a[min],a[i]);
+    }
+
+    for(int i:a)
+        cout<<i<<" ";
+}
+
+//-------------------2--------------
+
+#include <iostream>
+using namespace std;
+int main() {
+    int a[]={10,5,8,20,2,18};
+    int n=sizeof(a)/sizeof(int);
+    for(int i=0;i<n-1;i++){
         int min=i;
         for(int j=i+1;j<n;j++){
             if(a[j]<a[min])
