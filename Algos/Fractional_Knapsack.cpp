@@ -32,3 +32,46 @@ for(int i=0;i<n;i++){
 }
 cout<<ans<<endl;
 }
+
+//-------------------------------------------------------------------------
+//-------------------------------------------------------------------------
+
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+struct Item{
+    int value;
+    int weight;
+};
+double fractionalKnapsack(int W,Item arr[],int n){
+    vector<pair<double,int>>v;
+    for(int i=0;i<n;i++){
+        double x=(arr[i].value*1.0)/(arr[i].weight*1.0);
+        v.push_back({x,i});
+    }
+    sort(v.begin(),v.end(),greater<pair<double,int>>());
+    
+    int s=0;
+    double ans=0;
+    for(int i=0;i<v.size();i++){
+        if(s+arr[v[i].second].weight<W){
+            ans+=arr[v[i].second].value;
+            s+=arr[v[i].second].weight;
+        }
+        else{
+            double x=(W-s)*1.0;
+            ans+=(x*v[i].first);
+            break;
+        }
+    }
+    return ans;
+}
+int main() {
+    int W=50;
+    Item arr[]={{30,5},{20,10},{100,20},{90,30},{160,40}};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    
+    double ans=fractionalKnapsack(W,arr,n);
+
+    cout<<"Maximum Profit : "<<ans;
+}
