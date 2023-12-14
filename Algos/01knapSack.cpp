@@ -24,11 +24,11 @@ int main() {
 #include <iostream>
 using namespace std;
 int knapSack(int w[],int v[],int n,int k){
-    int i,s;
+    int i,j;
     int sol[n+1][k+1];
     
     for(i=0;i<n+1;i++){
-        for(int j=0;j<k+1;j++){
+        for(j=0;j<k+1;j++){
             if(i==0 || j==0)
                 sol[i][j]=0;
             else if(w[i-1]>j)
