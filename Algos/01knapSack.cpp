@@ -40,8 +40,6 @@ int knapSack(int w[],int v[],int n,int k){
     return sol[n][k];
 }
 int main() {
-    // int w[]={20,60,50,2};
-    // int v[]={100,300,500,40};
     int v[] = {70, 20, 50};
     int w[] = {11, 12, 13};
     int n=sizeof(w)/sizeof(w[0]);
