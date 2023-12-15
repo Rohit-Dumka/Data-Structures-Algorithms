@@ -54,3 +54,5 @@ int main(){
     int graph[][3] = {{0, 1, 5}, {1, 2, 3}, {0, 2, 1}};
     cout << prims(3, 3, graph) << endl;
 }
+
+// https://geuac-my.sharepoint.com/:f:/g/personal/adi_joshi_geu_ac_in/EmOAhVgMU-BEvF9IL4ECKFEBIU8TWM6WXc7U1OWZh3mWqQ?e=O8Yb52
